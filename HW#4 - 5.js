@@ -1,14 +1,15 @@
-https://jsfiddle.net/njahnik/1gabw34L/23/
+https://jsfiddle.net/njahnik/1gabw34L/26/
 
 'use strict'
 
-function stringExpansion(str) {
+const stringExpansion = (str) => {
+
     const expandedStr = [];
     let multiplier = 1;
 
     [...str].forEach((char) => {
         if (Number.isNaN(+char)) {
-            for (var j = 0; j < multiplier; j++) {
+            for (let j = 0; j < multiplier; j++) {
                 expandedStr.push(char);
             }
             multiplier = 1;
@@ -16,6 +17,7 @@ function stringExpansion(str) {
             multiplier = +char;
         }
     });
+
     return expandedStr.join('');
 }
 

@@ -1,17 +1,11 @@
-https://jsfiddle.net/njahnik/qzpcxve7/3/
+https://jsfiddle.net/njahnik/qzpcxve7/6/
 
 'use strict'
 
-function reverse(str) {
-    let newStr = str.split(' ');
-
-    newStr = newStr.map((word) => {
+const reverse = (str) => {
+    return str.split(' ').map((word) => {
         return word.split('').reverse().join('');
-    });
-
-    newStr = newStr.join(' ');
-
-    return newStr;
+    }).join(' ');
 }
 
 console.log(reverse('A fun little challenge!'));

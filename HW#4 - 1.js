@@ -1,11 +1,9 @@
-https://jsfiddle.net/njahnik/c9731Lqe/14/
+https://jsfiddle.net/njahnik/c9731Lqe/31/
 
 'use strict'
 
-function splitAndMerge(str, sp) {
-    return str.split(' ').map((word) => {
-        return word.split('').join(sp);
-    }).join(' ');
-}
+const splitAndMerge = (str, sp) => {
+    return str.split('').join(sp).split(`${sp} ${sp}`).join(" ");
+};
 
-console.log(splitAndMerge("Hello World!", ","));
+console.log(splitAndMerge("My name is John", " "));

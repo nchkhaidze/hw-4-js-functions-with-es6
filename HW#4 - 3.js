@@ -1,19 +1,12 @@
-https://jsfiddle.net/njahnik/L4ouea8r/14/
+https://jsfiddle.net/njahnik/L4ouea8r/18/
 
 'use strict'
 
-function toCamelCase(str) {
-
-    let newStr = str.split(/[-_]/g);
-
-    newStr = newStr.map((word, index) => {
+const toCamelCase = (str) => {
+    return str.split(/[-_]/g).map((word, index) => {
         const firstLetter = word[0].toUpperCase();
         return index > 0 ? word.replace(/^./, firstLetter) : word;
-    });
+    }).join('');
+};
 
-    newStr = newStr.join('');
-
-    return newStr;
-}
-
-console.log(toCamelCase('the_stealth_Warrior'));
+console.log(toCamelCase('the_stealth-Warrior'));
